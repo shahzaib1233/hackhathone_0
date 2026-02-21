@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "email": {
+      "command": "node",
+      "args": ["mcp_servers/email-mcp/index.js"],
+      "cwd": ".",
+      "description": "Email MCP Server - Draft and send emails via Gmail API with HITL approval",
+      "capabilities": ["draft_email", "send_email", "list_drafts", "approve_draft"]
+    }
+  },
+  "instructions": {
+    "draft_email": "Creates email draft in /Plans/email_draft_[date].md. Does not send.",
+    "send_email": "Sends email via Gmail API. Requires credentials.json and HITL approval.",
+    "approval_workflow": "1. Draft email -> 2. Review in /Plans/ -> 3. Move to /Pending_Approval/ -> 4. Approve -> 5. Send"
+  }
+}
